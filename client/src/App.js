@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {BrowerRouter as Router, Route, Link} from "react-router-dom"
+import {BrowserRouter as Router, Route, Link} from "react-router-dom"
 import Fib from "./Fib"
 import OtherPage from "./OtherPage"
 
@@ -12,7 +12,10 @@ function App() {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <div>
-            <Route exact path="/" component={Fib}></Route>
+            <Link to="/">Home</Link>
+            <Link to= "/otherpage">Other Page</Link>
+            <Route exact path="/" component={Fib}/>
+            <Route exact path= "/otherpage" component={OtherPage}/>
           
           </div>
           <a
