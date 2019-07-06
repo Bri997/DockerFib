@@ -10,7 +10,7 @@ app.use(bodyParser.json())
 //Postgres Client setup
 const {Pool} = require('pg')
 const pgClient = new Pool({
-    user:key.pgUser,
+    user:keys.pgUser,
     host: keys.pgHost,
     database: keys.pgDatabase,
     password: keys.pgPassword,
@@ -25,8 +25,8 @@ pgClient.query("CREATE TABLE IF NOT EXISTS values (number INT)")
 
 const redis = require("redis")
 const redisClient = redis.createClient({
-    host: key.redisHost,
-    post: key.redisPort,
+    host: keys.redisHost,
+    post: keys.redisPort,
     retry_strategy: ()=>1000
 })
 const redisPublisher = redisClient.duplicate()
