@@ -65,5 +65,5 @@ app.post("/values", async (req, res)=> {
 })
 
 app.listen(5000, err =>{
-    console.log("Listing on 5k")
+    console.log("Listening on 5k")
 })
