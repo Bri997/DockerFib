@@ -5,7 +5,7 @@ services:
   - docker
 
 before_install:
-  - docker build - Bri997/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t Bri997/react-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run -e CI=true Bri997/react-test npm test
