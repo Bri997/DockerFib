@@ -22,5 +22,5 @@ after_success:
   # Take these images and push them to docker hub
   - docker push brian997/multi-client
   - docker push brian997/multi-nginx
-  - docker push brian/multi-server
+  - docker push brian997/multi-server
   - docker push brian997/multi-worker
